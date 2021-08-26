@@ -27,15 +27,22 @@ header{
 .container{
     max-width: 1140px;
     margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     padding: 0 1rem;
 }
 
-@media only screen and (min-width: 990px) {
-    .btn-navBar{
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media only screen and (min-width: 900px) {
+    .btn-navBar button{
         display: none;
+    }
+
+    .navBar {
+        display: block;
     }
 } 
 
@@ -49,13 +56,18 @@ header{
     background: #010111;
     height: 1px;
     margin-top: 4px;
-    width: 70%;
+    width: 3rem;
 }
 
 .logo{
-    border: 1px solid #121212;
-    padding: .5rem;
+    padding: 1rem .5rem;
+    display: flex;
+    justify-content: space-between;
     font-size: 2rem;
+}
+
+.navBar {
+    display: block;
 }
 
 .navBar ul{
@@ -63,4 +75,33 @@ header{
     gap: 1rem;
     font-size: 1.3rem;
 }
+ 
+#btnativar{
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
 
+#btnativar img{
+    height: 2.5rem;
+}
+
+@media only screen and (max-width: 900px) {
+    .header{
+        display: block;
+    }
+
+    .navBar {
+        display: none;
+    }
+    .navBar ul{
+        flex-direction: column;
+        padding: 1rem .5rem;
+    }
+}
+
+@media only screen and (min-width: 900px) {
+    .navBar {
+        display: block !important;
+    }
+}
